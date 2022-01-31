@@ -11,14 +11,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private(set) var viewModel: ViewModel
+
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onTapGesture {
+                foo()
+            }
+            .task {
+                await viewModel.fetch()
+            }
+    }
+
+    func foo() {
+        print(viewModel.resulys)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: .init(container: .defaultValue))
     }
 }

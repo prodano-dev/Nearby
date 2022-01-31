@@ -12,9 +12,10 @@ import SwiftUI
 
 @main
 struct NearbyApp: App {
+    let enviroment = AppEnviroment.bootstrap()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: .init(container: enviroment.container))
         }
     }
 }
