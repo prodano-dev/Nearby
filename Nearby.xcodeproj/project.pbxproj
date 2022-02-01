@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB1A477C27A9BC4B00A45575 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1A477B27A9BC4B00A45575 /* MainView.swift */; };
+		EB8001A927A9B5FD00D78358 /* PlacePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8001A827A9B5FD00D78358 /* PlacePhoto.swift */; };
+		EB8001AB27A9B9A300D78358 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8001AA27A9B9A300D78358 /* PlaceCell.swift */; };
 		EBD9DE2527A8519A00E50E0B /* NearbyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9DE2427A8519A00E50E0B /* NearbyApp.swift */; };
-		EBD9DE2727A8519A00E50E0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9DE2627A8519A00E50E0B /* ContentView.swift */; };
 		EBD9DE2927A8519B00E50E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD9DE2827A8519B00E50E0B /* Assets.xcassets */; };
 		EBD9DE2C27A8519B00E50E0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD9DE2B27A8519B00E50E0B /* Preview Assets.xcassets */; };
 		EBD9DE3B27A854D300E50E0B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9DE3A27A854D300E50E0B /* Place.swift */; };
@@ -26,9 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB1A477B27A9BC4B00A45575 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EB8001A827A9B5FD00D78358 /* PlacePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePhoto.swift; sourceTree = "<group>"; };
+		EB8001AA27A9B9A300D78358 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		EBD2042F27A9C1CA005E1068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EBD9DE2127A8519A00E50E0B /* Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nearby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD9DE2427A8519A00E50E0B /* NearbyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyApp.swift; sourceTree = "<group>"; };
-		EBD9DE2627A8519A00E50E0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBD9DE2827A8519B00E50E0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBD9DE2B27A8519B00E50E0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBD9DE3A27A854D300E50E0B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		EBD9DE2327A8519A00E50E0B /* Nearby */ = {
 			isa = PBXGroup;
 			children = (
+				EBD2042F27A9C1CA005E1068 /* Info.plist */,
 				EBD9DE5327A892B900E50E0B /* SECRETS */,
 				EBD9DE4B27A8885200E50E0B /* Injected */,
 				EBD9DE3727A8548500E50E0B /* Utilities */,
@@ -118,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD9DE3A27A854D300E50E0B /* Place.swift */,
+				EB8001A827A9B5FD00D78358 /* PlacePhoto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,8 +164,9 @@
 		EBD9DE3927A854AA00E50E0B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				EBD9DE2627A8519A00E50E0B /* ContentView.swift */,
 				EBD9DE5127A88A4100E50E0B /* MainViewModel.swift */,
+				EB8001AA27A9B9A300D78358 /* PlaceCell.swift */,
+				EB1A477B27A9BC4B00A45575 /* MainView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -265,16 +273,18 @@
 				EBD9DE5527A892C700E50E0B /* SECRETS.swift in Sources */,
 				EBD9DE3E27A8774500E50E0B /* Route.swift in Sources */,
 				EBD9DE4627A879B600E50E0B /* PlacesWebRepository.swift in Sources */,
-				EBD9DE2727A8519A00E50E0B /* ContentView.swift in Sources */,
 				EBD9DE4F27A8886B00E50E0B /* DIContainer.swift in Sources */,
 				EBD9DE5227A88A4100E50E0B /* MainViewModel.swift in Sources */,
+				EB8001A927A9B5FD00D78358 /* PlacePhoto.swift in Sources */,
 				EBD9DE4A27A8882F00E50E0B /* AppEnviroment.swift in Sources */,
 				EBD9DE4027A8774C00E50E0B /* Path.swift in Sources */,
 				EBD9DE4D27A8886000E50E0B /* ServicesContainer.swift in Sources */,
+				EB1A477C27A9BC4B00A45575 /* MainView.swift in Sources */,
 				EBD9DE4227A8775600E50E0B /* Error.swift in Sources */,
 				EBD9DE4827A87A8700E50E0B /* PlacesService.swift in Sources */,
 				EBD9DE2527A8519A00E50E0B /* NearbyApp.swift in Sources */,
 				EBD9DE4427A8776400E50E0B /* WebRepository.swift in Sources */,
+				EB8001AB27A9B9A300D78358 /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +418,10 @@
 				DEVELOPMENT_TEAM = 9QN8WR38C3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nearby/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"\"";
+				INFOPLIST_KEY_NSLocationUsageDescription = "\"\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"For nearby veneus\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +451,10 @@
 				DEVELOPMENT_TEAM = 9QN8WR38C3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nearby/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"\"";
+				INFOPLIST_KEY_NSLocationUsageDescription = "\"\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"For nearby veneus\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

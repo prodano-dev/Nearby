@@ -12,7 +12,8 @@ import Foundation
 import Combine
 
 protocol PlacesWebRepository: WebRepository {
-    func fetchPlacesNearby() async throws -> Results
+    func fetchPlacesNearby(queryParams: String) async throws -> Results
+    func fetchPhotoDetails(id: String) async throws -> PlacePhoto
 }
 
 struct DefaultPlacesWebRepository: PlacesWebRepository {
@@ -25,13 +26,13 @@ struct DefaultPlacesWebRepository: PlacesWebRepository {
         self.baseURL = baseURL
     }
 
-    func fetchPlacesNearby() async throws -> Results {
+    func fetchPlacesNearby(queryParams: String) async throws -> Results {
 
         let route = Route(
             method: .Get,
             path: Path.Nearby.nearby,
 
-            ///TODO: Add key !!
+            
             headers: [
                 "Accept": "application/json",
                 "Authorization": Secrets.API_KEY
@@ -39,7 +40,19 @@ struct DefaultPlacesWebRepository: PlacesWebRepository {
             
         )
 
-        return try await fetchData(endpoint: route)
+        return try await fetchData(endpoint: route, queryParams: queryParams)
+    }
+
+    func fetchPhotoDetails(id: String) async throws -> PlacePhoto {
+
+        let rout = Route(
+            method: .Get,
+            path: Path.Photos.placeID(id: id),
+            headers: [
+                "Accept": "application/json",
+                "Authorization": Secrets.API_KEY
+            ])
+        return try await fetchImageData(endpoint: rout)
     }
 
 

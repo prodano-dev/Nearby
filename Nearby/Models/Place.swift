@@ -45,17 +45,6 @@ struct Place: Decodable {
         distance = try container.decode(Int.self, forKey: .distance)
         categorie = try container.decode([Categories].self, forKey: .categorie)
 
-        //let container = try decoder.container(keyedBy: CodingKeys.self)
-
-//        let prefixContainer = try container.nestedContainer(
-//            keyedBy: ImageURLKeys.self,
-//            forKey: .icon
-//        )
-//        let suffixContainer = try container.nestedContainer(
-//            keyedBy: ImageSuffixKeys.self,
-//            forKey: .icon
-//        )
-
         let mainContainer = try container.nestedContainer(
             keyedBy: MainCodingKeys.self,
             forKey: .geocodes
@@ -73,8 +62,6 @@ struct Place: Decodable {
         )
         latitude = try langContainer.decode(Double.self, forKey: .latitude)
     }
-
-
 }
 
 struct Categories: Decodable {

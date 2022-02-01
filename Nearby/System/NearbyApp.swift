@@ -15,7 +15,7 @@ struct NearbyApp: App {
     let enviroment = AppEnviroment.bootstrap()
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: .init(container: enviroment.container))
+            MainView(viewModel: .init(container: enviroment.container))
         }
     }
 }

@@ -17,4 +17,10 @@ enum Path {
             return "nearby"
         }
     }
+
+    enum Photos {
+        static func placeID(id: String) -> String {
+            return "\(id)/photos?limit=1"
+        }
+    }
 }

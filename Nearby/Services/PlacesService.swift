@@ -12,7 +12,8 @@ import Foundation
 import Combine
 
 protocol PlacesService {
-    func fetchPlaces() async throws -> Results
+    func fetchPlaces(queryParams: String) async throws -> Results
+    func fetchPhotoDetails(id: String) async throws -> PlacePhoto
 }
 
 struct DefaultPlacesService: PlacesService {
@@ -23,7 +24,11 @@ struct DefaultPlacesService: PlacesService {
         self.placesWebRepository = placesWebRepository
     }
 
-    func fetchPlaces() async throws -> Results {
-        return try await placesWebRepository.fetchPlacesNearby()
+    func fetchPlaces(queryParams: String) async throws -> Results {
+        return try await placesWebRepository.fetchPlacesNearby(queryParams: queryParams)
+    }
+
+    func fetchPhotoDetails(id: String) async throws -> PlacePhoto {
+        return try await placesWebRepository.fetchPhotoDetails(id: id)
     }
 }

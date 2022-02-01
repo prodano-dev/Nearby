@@ -32,11 +32,13 @@ public class Route {
         self.headers = headers
     }
 
-    public func urlRequest(baseURL: String, queryParams: [String: Any] = [:]) -> URLRequest {
+    public func urlRequest(baseURL: String, queryParams: String? = nil) -> URLRequest {
         let url = URL(string: baseURL + path)
         var urlComponent = URLComponents(url: url!, resolvingAgainstBaseURL: true)
         /// TODO:  add long and lat from user location.
-        urlComponent?.queryItems = [ URLQueryItem(name: "ll", value: "41.8781,-87.6298")]
+        if queryParams != nil {
+            urlComponent?.queryItems = [ URLQueryItem(name: "ll", value: queryParams)]
+        }
         var request = URLRequest(url: urlComponent!.url!)
         request.allHTTPHeaderFields = headers
         return request
